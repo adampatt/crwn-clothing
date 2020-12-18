@@ -7,7 +7,7 @@ class Directory extends React.Component {
         super();
 
         this.state = {
-            sections = [
+            sections: [
   {
     title: 'hats',
     imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',

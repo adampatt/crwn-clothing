@@ -1,27 +1,28 @@
 import React from 'react';
 import './sign-in.styles.scss';
 
-class Sign extends React.Component{
+class SignIn extends React.Component{
     constructor(props) { 
         super(props);
 
         this.state = {
             email: '',
             password: ''
-        }
+        };
+    }
 
         handleSubmit = event => {
             event.preventDefault();
 
             this.setState({ email: '', password:'' })
-        }
+        };
 
         handleChange = event => {
             const { value, name } = event.target;
 
             this.setState({ [name]: value })
-        }
-    }
+        };
+    
 
     render() {
         return(
@@ -52,3 +53,5 @@ class Sign extends React.Component{
         )
     }
 }
+
+export default SignIn;

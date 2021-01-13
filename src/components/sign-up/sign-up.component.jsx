@@ -18,6 +18,7 @@ class SignUp extends React.Component {
         }
     }
     render () {
+        const {dispalyName, email, password, confirmPassword} = this.state;
         return(
         <div className="sign-up">
             <h2 className="title"> I do not have a account</h2>
@@ -26,7 +27,10 @@ class SignUp extends React.Component {
                 <FormInput
                 type='text'
                 name='displayName'
-                value={}
+                value={dispalyName}
+                onChange={this.handleChange}
+                label="Display Name"
+                required
                 >
                 </FormInput>
             </form>

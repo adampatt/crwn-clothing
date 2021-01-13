@@ -1,5 +1,4 @@
 import firebase from 'firebase/app';
-
 import 'firebase/firestore';
 import 'firebase/auth';
 
@@ -37,6 +36,8 @@ const config = {
           console.log('error creating user', error.message);
         }
     }
+
+    return userRef;
   };
 
   firebase.initializeApp(config);

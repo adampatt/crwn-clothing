@@ -60,10 +60,11 @@ class SignUp extends React.Component {
                         required
                     >
                     </FormInput>
+                    <CustomButton type='submit'> SIGN UP </CustomButton>
             </form>
         </div>
         )
     }
-
-
 }
+
+export default SignUp;

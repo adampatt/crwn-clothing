@@ -11,4 +11,5 @@ const SignInAndSignUpPage = () => (
     </div>
 );
 
+
 export default SignInAndSignUpPage;

@@ -15,5 +15,7 @@ const Directory = ({ sections }) => (
   </div>
 );
 
+const mapStateToProps = ({})
+
 
 export default Directory;

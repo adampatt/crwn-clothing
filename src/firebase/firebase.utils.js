@@ -65,8 +65,12 @@ const config = {
         items
       }
     });
-    console.log(transfromedCollection);
-  }
+    
+    return transfromedCollection.reduce((accumulator, collection) => {
+      accumulator[collection.title.toLowerCase()] = collection;
+      return accumulator;
+    }, {});
+  };
 
   
   export const auth = firebase.auth();

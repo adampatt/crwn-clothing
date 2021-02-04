@@ -14,8 +14,9 @@ componentDidMount() {
   const collectionRef = firestore.collection('collections');
 
   collectionRef.onSnapshot(async Snapshot => {
-    convertCollectionsSnapshotToMap(Snapshot);
-  })
+    const collectionsMap = convertCollectionsSnapshotToMap(Snapshot);
+    console.log(collectionsMap);
+  });
 }
 
   render() {

@@ -2,6 +2,8 @@ import React from 'react';
 import { Route } from "react-router-dom";
 import CollectionsOverview from '../../components/collections-overview/collections-overview.component';
 import CollectionPage from '../collection/collection.component';
+import { connect } from "react-redux";
+import { updateCollections } from '../../redux/shop/shop.actions'
 import {
   firestore,
   convertCollectionsSnapshotToMap,
@@ -33,5 +35,8 @@ componentDidMount() {
   }
 }
 
+const mapDispatchToProps = dispatch => ({
+  updateCollections: collectionsMap => dispatch(updateCollections(collectionsMap))
+});
 
 export default ShopPage;

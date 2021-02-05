@@ -9,7 +9,15 @@ import {
   convertCollectionsSnapshotToMap,
 } from "../../firebase/firebase.utils";
 
+import WithSpinnner from '../../components/with-spinner/with-spinner.component';
+
+
+
 class ShopPage extends React.Component {
+  state = {
+    loading: true
+  };
+
   unsubscribeFromSnapshot = null;
 
 componentDidMount() {
@@ -19,6 +27,7 @@ componentDidMount() {
   collectionRef.onSnapshot(async Snapshot => {
     const collectionsMap = convertCollectionsSnapshotToMap(Snapshot);
     updateCollections(collectionsMap);
+    this.setState({ loading: flase });
   });
 }
 

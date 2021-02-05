@@ -14,7 +14,7 @@ import {
   EmptyMessage } 
   from "./cart-dropdown.styles.jsx";
 
-import "./cart-dropdown.styles.scss";
+
 
 const CartDropdown = ({ cartItems, history, dispatch }) => (
   <CartDropdownContainer>

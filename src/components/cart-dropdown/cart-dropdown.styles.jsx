@@ -1,7 +1,8 @@
 import styled from "styled-components";
+import CustomButton from "../custom-button/custom-button.component";
 
 export const CartDropdownContainer = styled.div`
-    position: absolute;
+  position: absolute;
   width: 240px;
   height: 340px;
   display: flex;
@@ -21,7 +22,11 @@ export const CartItemsContainer =styled.div`
     overflow: scroll;
 `;
 
-export const EmptyMessage = styled.span`
+export const EmptyMessageContainer = styled.span`
     font-size: 18px;
     margin: 50px auto;
 `; 
+
+export const CartDropdownButton = styled(CustomButton)`
+  margin-top: auto;
+`;

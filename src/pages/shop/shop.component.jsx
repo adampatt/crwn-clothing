@@ -25,15 +25,13 @@ componentDidMount() {
   const { updateCollections } = this.props;
   const collectionRef = firestore.collection('collections');
 
-  fetch(https://firestore.googleapis.com/v1/projects/crwn-db-ff33a/databases/(default)/documents/collections)
-
-  //collectionRef.get().then(snapshot => {
-    //const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
-    //updateCollections(collectionsMap);
-    //this.setState({ loading: false });
-  //.});
 
 
+  collectionRef.get().then(snapshot => {
+  const collectionsMap = convertCollectionsSnapshotToMap(snapshot);
+  updateCollections(collectionsMap);
+  this.setState({ loading: false });
+  });
 }
 
   render() {
